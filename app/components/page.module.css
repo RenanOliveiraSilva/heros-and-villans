@@ -1,0 +1,42 @@
+.character {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.topRight {
+  top: 20px;
+  right: 20px;
+}
+
+.bottomLeft {
+  bottom: 20px;
+  left: 20px;
+}
+
+.lifeBar {
+  margin-bottom: 10px;
+}
+
+.lifeFill {
+  height: 6px;
+  background-color: red;
+}
+
+.lifeText {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.sprite {
+  background-color: lightblue;
+  padding: 4px;
+  margin: 8px 0;
+}
+
+.actions {
+  margin-top: 10px;
+}
