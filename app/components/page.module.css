@@ -1,20 +1,22 @@
 .character {
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 260px;
+  padding: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
-  padding: 1rem;
-}
-
-.topRight {
-  top: 20px;
-  right: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .bottomLeft {
   bottom: 20px;
   left: 20px;
+}
+
+.topRight {
+  top: 20px;
+  right: 20px;
 }
 
 .lifeBar {
@@ -24,19 +26,51 @@
 .lifeFill {
   height: 6px;
   background-color: red;
+  transition: width 0.3s ease;
 }
 
 .lifeText {
   font-size: 0.8rem;
-  color: #333;
 }
 
 .sprite {
-  background-color: lightblue;
-  padding: 4px;
-  margin: 8px 0;
+  width: 64px;
+  height: 64px;
+  background-size: 300% 250%; /* 3 colunas, 2 linhas com altura proporcional */
+  image-rendering: pixelated;
+  margin: 0 auto 10px;
+  background-repeat: no-repeat;
+}
+
+/* Posições específicas para cada ação */
+.idle {
+  background-position: 0% 100%; /* Coluna 1, linha 2 */
+}
+
+.attack1 {
+  background-position: 50% 100%; /* Coluna 2, linha 2 */
+}
+
+.attack2 {
+  background-position: 0% 30%; /* Coluna 1, linha 1 */
+}
+
+.defend {
+  background-position: 50% 30%; /* Coluna 2, linha 1 */
+}
+
+.heal {
+  background-position: 100% 30%; /* Coluna 3, linha 1 */
+}
+
+.run {
+  background-position: 100% 100%; /* Coluna 3, linha 2 */
 }
 
 .actions {
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
 }
